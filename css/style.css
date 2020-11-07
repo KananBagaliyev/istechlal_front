@@ -285,6 +285,7 @@ body header #mobile_navbar nav .animate .burger_btn::after {
 }
 
 body header #mobile_navbar nav .mobile_navigation_bar {
+  top: 15px;
   background-color: white;
   display: none;
   width: 100%;
@@ -351,6 +352,7 @@ body main #prologue .introduction .fade_color {
 }
 
 body main #prologue .introduction .text {
+  margin-top: 70px;
   position: absolute !important;
   text-align: center;
 }
