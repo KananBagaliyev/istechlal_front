@@ -17,6 +17,29 @@
     }
 }
 
+@keyframes border-transform {
+    0%, to {
+      border-radius: 65% 86% 80% 69%/59% 55% 95% 89%;
+    }
+    14% {
+      border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+    }
+    28% {
+      border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+    }
+    42% {
+      border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+    }
+    56% {
+      border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+    }
+    70% {
+      border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+    }
+    84% {
+      border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+    }
+  }
 
 body{
     font-family: $font;
@@ -830,6 +853,7 @@ body{
 body{
     #partner{
         padding-top: 180px;
+        padding-bottom: 70px;
         .partner_wrapper{
             position: relative;
             background-color: $main_color;
@@ -872,7 +896,6 @@ body{
 
 body{
     footer{
-        margin-top: 70px!important;
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -1063,4 +1086,224 @@ body{
       }
 }
 
+body{
+    #title{
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 540px;
+        background-attachment: fixed;
+        // margin-top: 90px;
+
+        .title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            h1{
+                position: absolute;
+                top: 50%;
+                color: white;
+            }
+        }
+    }
+
+    #title:before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #07092b;
+        opacity: .90;
+    }
+}
+
+body{
+    #whyWe{
+        .row{
+            background-color: #f6f6f6;
+        }
+        .image_area{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            background-attachment: fixed;
+            img{
+                display: none;
+                width: 100%;
+            }
+        }
+
+        .whyWe_content{
+            padding: 75px 30px 45px 60px;
+
+            .section_title{
+                text-align: left;
+                position: relative;
+                z-index: 1;
+
+                h2{
+                    font-weight: 600;
+                    font-size: 38px;
+                    text-transform: capitalize;
+                    color: #282828;
+                }
+            }
+
+            p{
+                color: #4e4e4e;
+            }
+
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    transition: 0.5s all ease;
+                    display: inline-block;
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                    background-color: white;
+                    border-radius: 8px;
+                    color: $main_color;
+                    font-weight: 500;
+                    font-size: 17px;
+                    max-width: 230px;
+                    padding: 10px 15px 15px;
+                    margin-right: 30px;
+                    margin-bottom: 30px;
+                    position: relative;
+                    z-index: 1;
+                    overflow: hidden;
+                    cursor: context-menu;
+                }
+
+                li:before {
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 0%;
+                    left: 0;
+                    bottom: 0;
+                    background-color: $main_color;
+                    -webkit-transition: 0.5s all ease;
+                    transition: 0.5s all ease;
+                    border-radius: 8px;
+                    z-index: -1;
+                }
+
+                li:hover{
+                    
+                    color: white;
+                }
+
+                li:hover:before {
+                    
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+body{
+    background-color:#f6f6f6 ;
+    #projects{
+        .projects_item{
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 30px 25px 30px;
+            -webkit-box-shadow: 0px 0px 20px 0px #dddddd33;
+            box-shadow: 0px 0px 20px 0px #dddddd33;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-bottom: 30px;
+            position: relative;
+            height: 490px;
+
+            .projects_top{
+                img{
+                    
+                    animation: border-transform 10s linear infinite alternate forwards;
+                    transition: 0.5s all ease;
+                    border: 6px solid $main_color;
+                    width: 100%;
+                    // max-width: 240px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                }
+
+                i{
+                    display: inline-block;
+                    width: 70px;
+                    height: 70px;
+                    line-height: 70px;
+                    border-radius: 50%;
+                    background-color: #ffffff;
+                    border: 1px dotted $main_color;
+                    color: $main_color;
+                    font-size: 35px;
+                    margin-bottom: 15px;
+                    -webkit-transition: 0.5s all ease;
+                    transition: 0.5s all ease;
+                    margin-top: -60px;
+                }
+            }
+
+            .projects_bottom{
+                h3{
+                    font-weight: 600;
+                    font-size: 22px;
+                    margin-bottom: 8px;
+
+                    a{
+                        color: #282828;
+                    }
+
+                    a:hover {
+                        color: $main_color;
+                    }
+                }
+
+                
+
+                p {
+                    margin-bottom: 12px;
+                }
+
+                .projects_link {
+                    display: inline-block;
+                    font-weight: 500;
+                    color: $main_color;
+                    font-size: 20px;
+
+                    i {
+                        display: inline-block;
+                        font-size: 17px;
+                        position: relative;
+                    }
+                }
+
+                .projects_link:hover {
+                    color: #282828;
+                }
+            }
+        }
+    }
+}
+
+body{
+    #project_detail{
+        .detail_item{
+            font-family: "Poppins", sans-serif;
+        }
+    }
+}
 
